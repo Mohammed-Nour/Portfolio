@@ -18,7 +18,6 @@ async function getData(id) {
   fetch(apiUrl + params.toString())
     .then((response) => response.json())
     .then((data) => {
-      //   document.createElement("div").set;
       const title = document.getElementById("comic-title");
       const date = document.getElementById("comic-date");
       const image = document.getElementById("comic-image");
