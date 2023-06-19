@@ -22,6 +22,7 @@ async function getData(id) {
       const date = document.getElementById("comic-date");
       const image = document.getElementById("comic-image");
       title.textContent = data.safe_title;
+      console.log(data.month);
       const dateObj = new Date(data.year, data.month, data.day);
       date.textContent = dateObj.toLocaleDateString();
       image.src = data.img;
