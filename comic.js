@@ -8,7 +8,6 @@ async function getId() {
     .then((response) => response.json())
     .then((id) => {
       getData(id);
-      console.log(id);
     });
 }
 async function getData(id) {
@@ -18,15 +17,21 @@ async function getData(id) {
   fetch(apiUrl + params.toString())
     .then((response) => response.json())
     .then((data) => {
-      const title = document.getElementById("comic-title");
-      const date = document.getElementById("comic-date");
-      const image = document.getElementById("comic-image");
+      const container = document.getElementById("container");
+      const title = document.createElement("h2");
+      title.className = "main-title";
       title.textContent = data.safe_title;
-      console.log(data.month);
+      container.appendChild(title);
+      const date = document.createElement("p");
+      date.className = "comic-date";
+      date.id = "comic-date";
       const dateObj = new Date(data.year, data.month - 1, data.day);
       date.textContent = dateObj.toLocaleDateString();
+      container.appendChild(date);
+      const image = document.createElement("img");
+      image.id = "comic-image";
+      container.appendChild(image);
       image.src = data.img;
       image.alt = data.alt;
-      console.log(data);
     });
 }

@@ -5,7 +5,7 @@ body {
   flex-direction: column;
 }
 .comic-container {
-    max-width: 500px;
+    width: 500px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
