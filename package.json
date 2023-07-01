@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is website for portfoio with typescript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config rollup.config.js",
+    "watch": "rollup --config rollup.config.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mohammed-Nour/Frontend_Courese.git"
+  },
+  "author": "Mohamad Nour Shahin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mohammed-Nour/Frontend_Courese/issues"
+  },
+  "homepage": "https://github.com/Mohammed-Nour/Frontend_Courese#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/moment": "^2.13.0",
+    "rollup": "^3.26.0",
+    "tslib": "^2.6.0"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "dayjs": "^1.11.9",
+    "moment": "^2.29.4"
+  }
+}
